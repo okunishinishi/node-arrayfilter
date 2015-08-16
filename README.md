@@ -27,7 +27,7 @@ arrayfilter
 <!-- Description Start -->
 <a name="description"></a>
 
-Node.js module for array filtering functions.
+Array filtering utility.
 
 <!-- Description End -->
 

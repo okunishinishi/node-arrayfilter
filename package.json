@@ -1,7 +1,7 @@
 {
   "name": "arrayfilter",
-  "version": "1.0.3",
-  "description": "Node.js module for array filtering functions.",
+  "version": "1.0.4",
+  "description": "Array filtering utility.",
   "main": "lib",
   "scripts": {
     "build": "./ci/build.js",
