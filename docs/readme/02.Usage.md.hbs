@@ -1,9 +1,24 @@
 Usage
 -------
 
+
+{{#each vars.usageIndices}}
++ [{{{this}}}](#{{spinalcase this}})
+{{/each}}
+
+
+### Accepting By Pattern
+
+`arrayfilter.patternAccept(pattern)` create a function which accepts entries by regex (or string) matching.
+
+```Javascript
+{{{read 'docs/examples/example-pattern-accept.js'}}}
+```
+
+
 ### Rejecting Empty Entries
 
-`arrayfilter.emptyReject()` create a function witch rejects empty with rejects null, undefined and empty string.
+`arrayfilter.emptyReject()` create a function which rejects empty with rejects null, undefined and empty string.
 
 ```Javascript
 {{{read 'docs/examples/example-empty-reject.js'}}}
@@ -11,7 +26,7 @@ Usage
 
 ### Rejecting By Pattern
 
-`arrayfilter.patternReject(pattern)` create a function witch rejects by regex matching.
+`arrayfilter.patternReject(pattern)` create a function which rejects entries by regex (or string) matching.
 
 ```Javascript
 {{{read 'docs/examples/example-pattern-reject.js'}}}

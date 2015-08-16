@@ -5,6 +5,9 @@
 "use strict";
 
 var apeTmpl = require('ape-tmpl'),
+    fs = require('fs'),
+    os = require('os'),
+    arrayFilter = require('./lib'),
     pkg = require('./package.json');
 
 module.exports = apeTmpl.readmeMdBud({
@@ -18,7 +21,17 @@ module.exports = apeTmpl.readmeMdBud({
         gemnasium: false,
         npm: true
     },
-    links: null
+    links: null,
+    vars: {
+        get usageIndices() {
+            return fs.readFileSync(__dirname + '/docs/readme/02.Usage.md.hbs').toString()
+                .split(os.EOL)
+                .filter(arrayFilter.patternAccept(/^\s*###/))
+                .map(function (line) {
+                    return line.replace(/^\s*###\s*/, '');
+                })
+        }
+    }
 });
 
 if (!module.parent) {

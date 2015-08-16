@@ -46,9 +46,32 @@ npm install arrayfilter --save
 Usage
 -------
 
+
++ [Accepting By Pattern](#accepting-by-pattern)
++ [Rejecting Empty Entries](#rejecting-empty-entries)
++ [Rejecting By Pattern](#rejecting-by-pattern)
+
+
+### Accepting By Pattern
+
+`arrayfilter.patternAccept(pattern)` create a function which accepts entries by regex (or string) matching.
+
+```Javascript
+var arrayfilter = require('arrayfilter');
+
+//Define a filter function.
+var acceptFo = arrayfilter.patternAccept(/^fo/);
+
+//Execute filtering.
+var values = ['foo', 'bar', 'baz'].filter(acceptFo);
+console.log(values); // -> ['foo']
+
+```
+
+
 ### Rejecting Empty Entries
 
-`arrayfilter.emptyReject()` create a function witch rejects empty with rejects null, undefined and empty string.
+`arrayfilter.emptyReject()` create a function which rejects empty with rejects null, undefined and empty string.
 
 ```Javascript
 var arrayfilter = require('arrayfilter');
@@ -64,7 +87,7 @@ console.log(values); // -> ['foo', 'bar']
 
 ### Rejecting By Pattern
 
-`arrayfilter.patternReject(pattern)` create a function witch rejects by regex matching.
+`arrayfilter.patternReject(pattern)` create a function which rejects entries by regex (or string) matching.
 
 ```Javascript
 var arrayfilter = require('arrayfilter');
