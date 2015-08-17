@@ -1,13 +1,11 @@
 /**
- * Test case for patternAccept
- * Runs with nodeunit
+ * Test case for patternAccept.
+ * Runs with nodeunit.
  */
-
-"use strict";
 
 var patternAccept = require('../lib/pattern_accept.js');
 
-exports['Sort string.'] = function (test) {
+exports['Pattern accept'] = function(test){
     var filter = patternAccept(/^__/);
     test.ok(!filter('foo'));
     test.ok(filter('__foo'));
@@ -16,3 +14,4 @@ exports['Sort string.'] = function (test) {
     });
     test.done();
 };
+

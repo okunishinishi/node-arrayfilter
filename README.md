@@ -46,7 +46,6 @@ npm install arrayfilter --save
 Usage
 -------
 
-
 + [Accepting By Pattern](#accepting-by-pattern)
 + [Rejecting Empty Entries](#rejecting-empty-entries)
 + [Rejecting By Pattern](#rejecting-by-pattern)
