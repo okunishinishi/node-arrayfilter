@@ -59,10 +59,10 @@ Usage
 ```Javascript
 var arrayfilter = require('arrayfilter');
 
-//Define a filter function.
+// Define a filter function.
 var acceptFo = arrayfilter.patternAccept(/^fo/);
 
-//Execute filtering.
+// Execute filtering.
 var values = ['foo', 'bar', 'baz'].filter(acceptFo);
 console.log(values); // -> ['foo']
 
@@ -76,10 +76,10 @@ console.log(values); // -> ['foo']
 ```Javascript
 var arrayfilter = require('arrayfilter');
 
-//Define a filter function.
+// Define a filter function.
 var rejectEmpty = arrayfilter.emptyReject();
 
-//Execute filtering.
+// Execute filtering.
 var values = ['foo', '', null, 'bar', undefined].filter(rejectEmpty);
 console.log(values); // -> ['foo', 'bar']
 
@@ -92,10 +92,10 @@ console.log(values); // -> ['foo', 'bar']
 ```Javascript
 var arrayfilter = require('arrayfilter');
 
-//Define a filter function.
+// Define a filter function.
 var rejectFo = arrayfilter.patternReject(/^fo/);
 
-//Execute filtering.
+// Execute filtering.
 var values = ['foo', 'bar', 'baz'].filter(rejectFo);
 console.log(values); // -> ['bar', 'baz']
 
