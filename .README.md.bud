@@ -21,7 +21,7 @@ module.exports = apeTmpl.readmeMdBud({
         gemnasium: false,
         npm: true
     },
-    links: null,
+    links: require('./docs/links.json'),
     vars: {
         get usageIndices() {
             return fs.readFileSync(__dirname + '/docs/readme/02.Usage.md.hbs').toString()

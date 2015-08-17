@@ -117,3 +117,13 @@ This software is released under the [MIT License](https://github.com/okunishinis
 <!-- LICENSE End -->
 
 
+<!-- Links Start -->
+<a name="links"></a>
+
+Links
+------
+
++ [arrayreduce](https://github.com/okunishinishi/node-arrayreduce)
++ [arraysort](https://github.com/okunishinishi/node-arraysort)
+
+<!-- Links End -->
