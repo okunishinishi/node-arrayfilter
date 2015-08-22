@@ -48,6 +48,7 @@ Usage
 
 + [Accepting By Pattern](#accepting-by-pattern)
 + [Rejecting Empty Entries](#rejecting-empty-entries)
++ [Rejecting Duplicated Entries](#rejecting-duplicated-entries)
 + [Rejecting By Pattern](#rejecting-by-pattern)
 
 
@@ -84,6 +85,22 @@ console.log(values); // -> ['foo', 'bar']
 
 ```
 
+### Rejecting Duplicated Entries
+
+`arrayfilter.duplicateReject()` create a function which rejects empty with rejects null, undefined and empty string.
+
+```Javascript
+var arrayfilter = require('arrayfilter');
+
+// Define a filter function.
+var duplicateReject = arrayfilter.duplicateReject();
+
+// Execute filtering.
+var values = ['foo', 'bar', 'foo'].filter(duplicateReject);
+console.log(values); // -> ['foo', 'bar']
+
+```
+
 ### Rejecting By Pattern
 
 `arrayfilter.patternReject(pattern)` create a function which rejects entries by regex (or string) matching.
@@ -99,6 +116,8 @@ var values = ['foo', 'bar', 'baz'].filter(rejectFo);
 console.log(values); // -> ['bar', 'baz']
 
 ```
+
+
 
 
 
