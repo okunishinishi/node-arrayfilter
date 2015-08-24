@@ -33,9 +33,13 @@ Array filtering utility.
 
 
 
+
 <!-- Sections Start -->
 <a name="sections"></a>
 
+<!-- Section from "docs/readme/01.Installation.md.hbs" Start -->
+
+<a name="section-docs-readme-01-installation-md"></a>
 Installation
 -----
 
@@ -43,14 +47,36 @@ Installation
 npm install arrayfilter --save
 ```
 
+<!-- Section from "docs/readme/01.Installation.md.hbs" End -->
+
+<!-- Section from "docs/readme/02.Usage.md.hbs" Start -->
+
+<a name="section-docs-readme-02-usage-md"></a>
 Usage
 -------
 
++ [Accepting By Type](#accepting-by-type)
 + [Accepting By Pattern](#accepting-by-pattern)
 + [Rejecting Empty Entries](#rejecting-empty-entries)
 + [Rejecting Duplicated Entries](#rejecting-duplicated-entries)
 + [Rejecting By Pattern](#rejecting-by-pattern)
++ [Rejecting By Type](#rejecting-by-type)
 
+### Accepting By Type
+
+`arrayfilter.typeAccept(type)` create a function which accepts entries by type matching.
+
+```Javascript
+var arrayfilter = require('arrayfilter');
+
+// Define a filter function.
+var acceptString = arrayfilter.typeAccept('string');
+
+// Execute filtering.
+var values = ['foo', {}, 123].filter(acceptString);
+console.log(values); // -> ['foo']
+
+```
 
 ### Accepting By Pattern
 
@@ -117,9 +143,27 @@ console.log(values); // -> ['bar', 'baz']
 
 ```
 
+### Rejecting By Type
+
+`arrayfilter.typeReject(type)` create a function which rejects entries by type matching.
+
+```Javascript
+var arrayfilter = require('arrayfilter');
+
+// Define a filter function.
+var rejectString = arrayfilter.typeReject('object');
+
+// Execute filtering.
+var values = ['foo', {}, {}].filter(rejectString);
+console.log(values); // -> ['foo']
+
+```
 
 
 
+
+
+<!-- Section from "docs/readme/02.Usage.md.hbs" End -->
 
 
 <!-- Sections Start -->
