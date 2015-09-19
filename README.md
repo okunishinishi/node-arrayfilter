@@ -20,6 +20,7 @@ arrayfilter
 [bd_gemnasium_shield_url]: https://gemnasium.com/okunishinishi/node-arrayfilter.svg
 [bd_npm_url]: http://www.npmjs.org/package/arrayfilter
 [bd_npm_shield_url]: http://img.shields.io/npm/v/arrayfilter.svg?style=flat
+[bd_bower_badge_url]: https://img.shields.io/bower/v/arrayfilter.svg?style=flat
 
 <!-- Badge End -->
 
@@ -37,9 +38,9 @@ Array filtering utility.
 <!-- Sections Start -->
 <a name="sections"></a>
 
-<!-- Section from "docs/readme/01.Installation.md.hbs" Start -->
+<!-- Section from "doc/readme/01.Installation.md.hbs" Start -->
 
-<a name="section-docs-readme-01-installation-md"></a>
+<a name="section-doc-readme-01-installation-md"></a>
 Installation
 -----
 
@@ -47,11 +48,11 @@ Installation
 npm install arrayfilter --save
 ```
 
-<!-- Section from "docs/readme/01.Installation.md.hbs" End -->
+<!-- Section from "doc/readme/01.Installation.md.hbs" End -->
 
-<!-- Section from "docs/readme/02.Usage.md.hbs" Start -->
+<!-- Section from "doc/readme/02.Usage.md.hbs" Start -->
 
-<a name="section-docs-readme-02-usage-md"></a>
+<a name="section-doc-readme-02-usage-md"></a>
 Usage
 -------
 
@@ -163,7 +164,7 @@ console.log(values); // -> ['foo']
 
 
 
-<!-- Section from "docs/readme/02.Usage.md.hbs" End -->
+<!-- Section from "doc/readme/02.Usage.md.hbs" End -->
 
 
 <!-- Sections Start -->
