@@ -1,8 +1,11 @@
-var arrayfilter = require('arrayfilter');
+"use strict";
+
+const arrayfilter = require('arrayfilter');
 
 // Define a filter function.
-var rejectFo = arrayfilter.patternReject(/^fo/);
+let rejectFo = arrayfilter.patternReject(/^fo/);
 
 // Execute filtering.
-var values = ['foo', 'bar', 'baz'].filter(rejectFo);
+let values = ['foo', 'bar', 'baz'].filter(rejectFo);
 console.log(values); // -> ['bar', 'baz']
+

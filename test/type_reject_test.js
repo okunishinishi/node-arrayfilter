@@ -3,7 +3,7 @@
  * Runs with nodeunit.
  */
 
-var typeReject = require('../lib/type_reject.js');
+const typeReject = require('../lib/type_reject.js');
 
 exports.setUp = function (done) {
     done();
@@ -16,13 +16,13 @@ exports.tearDown = function (done) {
 exports['Type reject'] = function (test) {
 
     var filter = typeReject('string');
-    test.ok(filter(function () {
+    test.ok(filter(() => {
     }));
     test.ok(filter(123));
     test.ok(filter({}));
     test.ok(!filter('__foo'));
-    test.throws(function () {
-        [1, {}, function () {
+    test.throws(() => {
+        [1, {}, () => {
         }].filter(typeReject);
     });
     test.done();

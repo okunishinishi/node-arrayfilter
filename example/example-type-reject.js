@@ -1,8 +1,10 @@
-var arrayfilter = require('arrayfilter');
+"use strict";
+
+const arrayfilter = require('arrayfilter');
 
 // Define a filter function.
-var rejectString = arrayfilter.typeReject('object');
+let rejectString = arrayfilter.typeReject('object');
 
 // Execute filtering.
-var values = ['foo', {}, {}].filter(rejectString);
+let values = ['foo', {}, {}].filter(rejectString);
 console.log(values); // -> ['foo']

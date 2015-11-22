@@ -4,7 +4,7 @@
 
 "use strict";
 
-var apeTmpl = require('ape-tmpl'),
+const apeTmpl = require('ape-tmpl'),
     fs = require('fs'),
     os = require('os'),
     arrayfilter = require('./lib'),
@@ -27,7 +27,7 @@ module.exports = apeTmpl.readmeMdBud({
             return fs.readFileSync(__dirname + '/doc/readme/02.Usage.md.hbs').toString()
                 .split(os.EOL)
                 .filter(arrayfilter.patternAccept(/^\s*###/))
-                .map(function (line) {
+                .map((line) => {
                     return line.replace(/^\s*###\s*/, '');
                 })
         }

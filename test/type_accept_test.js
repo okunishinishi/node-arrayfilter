@@ -2,8 +2,9 @@
  * Test case for typeAccept.
  * Runs with nodeunit.
  */
+"use strict";
 
-var typeAccept = require('../lib/type_accept.js');
+const typeAccept = require('../lib/type_accept.js');
 
 exports.setUp = function (done) {
     done();
@@ -14,14 +15,14 @@ exports.tearDown = function (done) {
 };
 
 exports['Type accept'] = function (test) {
-    var filter = typeAccept('string');
-    test.ok(!filter(function () {
+    let filter = typeAccept('string');
+    test.ok(!filter(() => {
     }));
     test.ok(!filter(123));
     test.ok(!filter({}));
     test.ok(filter('__foo'));
-    test.throws(function () {
-        [1, {}, function () {
+    test.throws(() => {
+        [1, {}, () => {
         }].filter(typeAccept);
     });
     test.done();

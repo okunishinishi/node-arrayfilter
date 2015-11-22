@@ -1,8 +1,10 @@
-var arrayfilter = require('arrayfilter');
+"use strict";
+
+const arrayfilter = require('arrayfilter');
 
 // Define a filter function.
-var duplicateReject = arrayfilter.duplicateReject();
+let duplicateReject = arrayfilter.duplicateReject();
 
 // Execute filtering.
-var values = ['foo', 'bar', 'foo'].filter(duplicateReject);
+let values = ['foo', 'bar', 'foo'].filter(duplicateReject);
 console.log(values); // -> ['foo', 'bar']

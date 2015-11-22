@@ -2,14 +2,15 @@
  * Test case for patternAccept.
  * Runs with nodeunit.
  */
+"use strict";
 
-var patternAccept = require('../lib/pattern_accept.js');
+const patternAccept = require('../lib/pattern_accept.js');
 
 exports['Pattern accept'] = function(test){
-    var filter = patternAccept(/^__/);
+    let filter = patternAccept(/^__/);
     test.ok(!filter('foo'));
     test.ok(filter('__foo'));
-    test.throws(function () {
+    test.throws(() => {
         [1, 2, 3].filter(patternAccept);
     });
     test.done();

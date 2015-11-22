@@ -5,13 +5,13 @@
 
 "use strict";
 
-var patternReject = require('../lib/pattern_reject.js');
+const patternReject = require('../lib/pattern_reject.js');
 
 exports['Sort string.'] = function (test) {
-    var filter = patternReject(/^__/);
+    let filter = patternReject(/^__/);
     test.ok(filter('foo'));
     test.ok(!filter('__foo'));
-    test.throws(function () {
+    test.throws(() => {
         [1, 2, 3].filter(patternReject);
     });
     test.done();

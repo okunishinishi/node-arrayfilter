@@ -1,8 +1,10 @@
-var arrayfilter = require('arrayfilter');
+"use strict";
+
+const arrayfilter = require('arrayfilter');
 
 // Define a filter function.
-var rejectEmpty = arrayfilter.emptyReject();
+let rejectEmpty = arrayfilter.emptyReject();
 
 // Execute filtering.
-var values = ['foo', '', null, 'bar', undefined].filter(rejectEmpty);
+let values = ['foo', '', null, 'bar', undefined].filter(rejectEmpty);
 console.log(values); // -> ['foo', 'bar']
